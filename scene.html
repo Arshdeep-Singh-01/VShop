@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>V-Shop</title>
+    <link rel="icon" href="data:image/png;base64,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" type="image/icon type">
+    <meta name="description" content="Positional Audio Example — Networked-Aframe" />
+
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://ipfs.io/ipns/lib.zesty.market/zesty-aframe-sdk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.5.0/socket.io.slim.js"></script>
+    <script src="/easyrtc/easyrtc.js"></script>
+    <script src="/dist/networked-aframe.js"></script>
+    <script src="js/animation-mixer.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+      NAF.schemas.getComponentsOriginal = NAF.schemas.getComponents;
+      NAF.schemas.getComponents = (template) => {
+        if (!NAF.schemas.hasTemplate('#avatar-template')) {
+           NAF.schemas.add({
+        template: '#avatar-template',
+        components: [
+          'position',
+          'rotation',
+          {
+            selector: '.head',
+            component: 'material',
+            property: 'color'
+          },
+          {
+            selector: '.nametag',
+            component: 'text',
+            property: 'value'
+          },
+          {
+            selector:'.mainModel',
+            component: 'gltf-model'
+          }
+        ]
+      });
+        }
+        const components = NAF.schemas.getComponentsOriginal(template);
+        return components;
+      };
+      
+      //edited
+      
+      
+      function changeRollOff() {
+document.getElementById("river").setAttribute("networked-audio-source", "rolloffFactor", 20000000);
+            console.log ("1");
+    }
+    function changeRollOff2() {
+document.getElementById("river").setAttribute("networked-audio-source", "rolloffFactor", 0);
+          console.log ("2");
+
+    }
+    </script>
+    <script src="https://unpkg.com/aframe-randomizer-components@^3.0.1/dist/aframe-randomizer-components.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js">
+      
+    </script>
+    
+    <script src="/js/dynamic-room.component.js"></script>
+    <script src="/js/spawn-in-circle.component.js"></script>
+    <script src="/js/description.component.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <a-scene dynamic-room light="type: ambient; color: #FFFFFF; intensity 1; cashShadow: true"
+      position="-0.5 1 1">
+       <a-assets>
+        <a-asset-item id="building" src="/models/store_in_the_mall/scene.gltf"></a-asset-item>
+        <a-asset-item id="sup" src="/models/parking_supervisor/scene.gltf"></a-asset-item>
+        <a-asset-item id="billboard" src="/models/billboard/scene.gltf"></a-asset-item>
+<!--         <a-asset-item id="gg1" src="/models/sunglasses/gg1.gltf"></a-asset-item>
+        <a-asset-item id="gg2" src="/models/sunglasses/gg2.gltf"></a-asset-item>
+        <a-asset-item id="gg3" src="/models/sunglasses/gg3.gltf"></a-asset-item>
+        <a-asset-item id="gg4" src="/models/sunglasses/gg4.gltf"></a-asset-item>
+        <a-asset-item id="sg1" src="/models/sunglasses/sg1.gltf"></a-asset-item>
+        <a-asset-item id="sg2" src="/models/sunglasses/sg2.gltf"></a-asset-item>
+        <a-asset-item id="sg3" src="/models/sunglasses/sg3.gltf"></a-asset-item>
+        <a-asset-item id="sg4" src="/models/sunglasses/sg4.gltf"></a-asset-item>
+        <a-asset-item id="ss1" src="/models/sunglasses/ss1.gltf"></a-asset-item>
+        <a-asset-item id="ss2" src="/models/sunglasses/ss2.gltf"></a-asset-item>
+        <a-asset-item id="ss3" src="/models/sunglasses/ss3.gltf"></a-asset-item>
+        <a-asset-item id="ss4" src="/models/sunglasses/ss4.gltf"></a-asset-item> -->
+
+
+
+
+         
+        <!-- Templates -->
+        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+        <!-- Avatar -->
+         <template id="avatar-template" type="text/html">
+           <a-entity>
+           <a-entity
+            class="nametag"
+            text="value: Hello World; align:center;"
+            position="0 0.3 0.5"
+            rotation="0 180 0"
+            scale="8 8 8"
+          ></a-entity>
+          <a-entity class="avatar" id="river1" networked-audio-source>
+           
+            <a-plane
+              color="#FFF"
+              width="0.6"
+              height="0.6"
+              position="0 .8 0.5"
+              material="side: front"
+              id = "front"
+              visible="true"
+              networked-video-source
+            ></a-plane>
+            <a-plane
+              color="#FFF"
+              width="0.6"
+              height="0.6"
+              position="0 .8 0.5"
+              material="side: back"
+              id="back"
+              visible="true"
+              networked-video-source
+            ></a-plane>
+            <a-entity
+              class="mainModel"
+              scale="0.8 0.8 0.8"
+              position="0 -1.4 0.5"
+              rotation="0 180 0"
+              gltf-model=""
+            ></a-entity>
+            <a-sphere
+              class="head"
+              color="#5985ff"
+              scale="0.45 0.5 0.4"
+              random-color
+              visible="false"
+            ></a-sphere>
+            
+          </a-entity>
+             </a-entity>
+        </template>
+
+        <!-- /Templates -->
+      </a-assets>
+
+
+
+
+
+
+
+
+
+      
+       <a-entity
+        id="river"
+        position="0 2 0"
+        sound="src: url(https://cdn.glitch.com/2ecb29ef-7d11-4ac6-b954-e050a39aa59a%2FES_Multimedia%20840%20-%20SFX%20Producer.mp3?v=1630796674034); autoplay: true; rolloffFactor: 0;"
+      ></a-entity>
+      <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
+      <!-- Shop Decoration -->
+         <a-entity gltf-model="#building" scale="0.05 0.05 0.05" position="-22.42459 0.1 -22.76932" rotation="0 90 0"></a-entity>
+     
+     <a-entity gltf-model="#sup" scale="1.2 1.2 1.2" position="-17.45409 0 7.7181" rotation="0 173.80330940616446 0"></a-entity>
+<!--                <a-entity gltf-model="/models/store_in_the_mall/scene.gltf" scale="0.05 0.05 0.05" position="0.83962 0.24054 18.60956" rotation="0 -90 0"></a-entity> -->
+      
+         <a-entity
+        light="type: ambient; angle: 30"
+      ></a-entity>
+      <a-entity 
+        environment="preset:contact;lighting:atmo;skyType:color;skyColor:#000;grid:none;dressing:none;playArea:10;"
+      ></a-entity>
+      <a-entity
+        visible="true"
+        zesty-banner="space: 0; creator: 0x0000000000000000000000000000000000000000; format: tall; style: standard; beacon: true"
+        position="6 2 -0.627"
+      ></a-entity>
+          <a-entity position="0 0 -3" geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.04" material="color: cyan; shader: flat" cursor="fuse: true; rayOrigin: mouse" raycaster="direction: 0.3573465497245191 0.3491372922465475 -0.8662601194576204; origin: -0.5 2.6 10.506058229864196; useWorldCoordinates: true">
+          </a-entity>
+      </a-entity>
+      <a-entity position="0 20 0" scale="0.1 0.1 0.1">
+<!--         <a-entity starsky></a-entity> -->
+      </a-entity>
+      <a-entity
+        light="type: spot; angle: 30"
+        position="-15 16.0457 -43.4666"
+        rotation="45 0 0"
+      ></a-entity>
+
+      <!-- Highway road-->
+
+      <a-entity
+        gltf-model="https://cdn.glitch.global/75ffbd39-c462-4b94-a6d3-da26579aa2e6/app-3d-st%20(2).glb?v=1645022463197"
+        scale="1 1 1"
+        rotation="0 -90 0"
+        position="6 0.1 0"
+      >
+      </a-entity>
+
+      <!-- Billboard For the intro -->
+      <a-entity position="34.04804 19.41699 -52.26572">
+        <a-entity
+          gltf-model="#billboard"
+          scale="0.05 0.05 0.05"
+          rotation="0 -90 0"
+        >
+          <a-light
+            id="boardLightF1"
+            type="spot"
+            position="128.93391 172.30618 176.8728"
+            light="angle: 55; decay: 1.01; intensity: 3; penumbra: 0.3; distance: 150"
+            rotation="29.999999999999996 90 0"
+          >
+          </a-light>
+          <a-light
+            id="boardLightF2"
+            type="spot"
+            position="129.63 179.26145 -196.04442"
+            light="angle: 90; decay: 1.01; intensity: 3; penumbra: 0.3"
+            rotation="65 80 0"
+          >
+          </a-light>
+          <a-light
+            id="boardLightB1"
+            type="spot"
+            position="-179.96527 170.53182 176.10788"
+            light="angle: 80; decay: 0; intensity: 2.5; penumbra: 0.3; distance: 45"
+            rotation="59.99999999999999 150 0"
+            scale=""
+          >
+          </a-light>
+          <a-light
+            id="boardLightB2"
+            type="spot"
+            position="-183.84137 177.71888 -7.71658"
+            light="angle: 65; decay: 0; intensity: 2.5; penumbra: 0.3; distance: 45"
+            rotation="119.99999999999999 59.99999999999999 0"
+          >
+          </a-light>
+          <a-light
+            id="boardLightB"
+            type="spot"
+            position="-179.96527 170.53182 -205.4914"
+            light="angle: 65; decay: 0; intensity: 2.5; penumbra: 0.3; distance: 45"
+            rotation="119.99999999999999 90 0"
+          >
+          </a-light>
+
+          <a-entity
+            scale="2 2 2"
+            position="32.41647 328.05346 30.10496"
+            geometry="width: 400; height: 200; depth: 0.8;"
+            rotation="0 90 0"
+          >
+            <a-image
+              src="https://cdn.glitch.global/c28ea069-932a-426b-a130-fa32ae317c8b/Aframe.png?v=1644788066960"
+              shader="standard"
+              position="0.79041 0.38025 1.96953"
+              width="400"
+              height="300"
+              material=""
+              geometry="height: 200"
+            >
+            </a-image>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+      <a-entity position="50 15 40" rotation="0 260 0">
+        <a-entity
+          gltf-model="#billboard"
+          scale="0.05 0.05 0.05"
+          rotation="0 -90 0"
+        >
+        
+         <a-light
+            id="boardLightF_1"
+            type="spot"
+            position="128.93391 172.30618 176.8728"
+            light="angle: 55; decay: 1.01; intensity: 3; penumbra: 0.3; distance: 150"
+            rotation="29.999999999999996 90 0"
+          >
+          </a-light> 
+        <a-light
+            id="boardLightF_2"
+            type="spot"
+            position="129.63 179.26145 -196.04442"
+            light="angle: 90; decay: 1.01; intensity: 3; penumbra: 0.3"
+            rotation="65 80 0"
+          >
+          </a-light>
+          <a-light
+            id="boardLightB_1"
+            type="spot"
+            position="-179.96527 170.53182 176.10788"
+            light="angle: 80; decay: 0; intensity: 2.5; penumbra: 0.3; distance: 45"
+            rotation="59.99999999999999 150 0"
+            scale=""
+          >
+          </a-light>
+        <a-light
+            id="boardLightB_2"
+            type="spot"
+            position="-183.84137 177.71888 -7.71658"
+            light="angle: 65; decay: 0; intensity: 2.5; penumbra: 0.3; distance: 45"
+            rotation="119.99999999999999 59.99999999999999 0"
+          >
+          </a-light>
+          <a-light
+            id="boardLightB_"
+            type="spot"
+            position="-179.96527 170.53182 -205.4914"
+            light="angle: 65; decay: 0; intensity: 2.5; penumbra: 0.3; distance: 45"
+            rotation="119.99999999999999 90 0"
+          >
+          </a-light> 
+
+             <a-entity
+            scale="2 2 2"
+            position="32.41647 328.05346 30.10496"
+            geometry="width: 400; height: 200; depth: 0.8;"
+            rotation="0 90 0"
+          >
+            <a-entity
+              visible="true"
+              zesty-banner="space: 0; creator: 0x0000000000000000000000000000000000000000; format: wide; beacon: true"
+              position="-4.90942 2.15 1"
+              scale="120 120 120" 
+              
+            ></a-entity>
+          </a-entity> 
+
+          
+        </a-entity>
+      </a-entity>
+
+
+
+
+
+
+      
+     
+
+
+
+
+<!----------------------Model - 1 - start------------------------>
+
+<a-entity position="-21 0.5 -36.5">
+     
+   <a-box id="board1" material="opacity: 0.5; color: #b3f2ff; emissive: #b5eae9" position="0.26807 1.26703 0.875" rotation="0 -17.58980431051627 0" scale="0.643 1.1 0.028" visible="" geometry="">
+          <a-entity text="font: https://cdn.aframe.io/fonts/Exo2Bold.fnt; side: double; value:SIZE: \t XL\nBRAND:\t Flipkart\n Color:\t pink\n Desc:\n slim, tight, wear\n for women. Best \nfor party" position="1 0 0" rotation="0 -19.595 0" scale="3 1.5 3" ></a-entity>
+        </a-box>
+<!--   <a-box material="color:red" position="2 1 0" scale="1 0.5 0.5">
+  
+  </a-box> -->
+  <a-plane id="p1" class ="sell"  desc="product:pink dress ;description: fit and slim;price:2600;currency:INR" position="2 1.5 0" scale ="0.6 0.6 0.6">
+    <a-image src="./img/cart.png"></a-image>
+  </a-plane>
+   
+      <!--mannequine-->
+    <a-gltf-model
+          id="item1"
+          class="clickToInfo"
+          position="1 0.2 0"
+
+          src="https://d1a370nemizbjq.cloudfront.net/4e5f29bb-752f-489c-8267-1d639fbdb9e3.glb"
+          eventset__entclick2="_event:mouseenter; _target:#board1 ;visible:true"
+          eventset__extclick2="_event:mouseleave;_target:#board1 ;visible:false"
+          desc="product:pink dress ;description: fit and slim;price:2600;currency:INR"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 8000;easing:linear"
+        >
+        </a-gltf-model>
+</a-entity>
+
+<!----------------------Model - 1 - End-------------------------->   
+<!----------------------Model - 2 - start------------------------>
+
+      <a-entity position="-17 0.5 -36.5">
+
+   <a-box id="board2" material="opacity: 0.5; color: #b3f2ff; emissive: #b5eae9" position="0.26807 1.26703 0.875" rotation="0 -17.58980431051627 0" scale="0.643 1.1 0.028" visible="" geometry="">
+          <a-entity text="font: https://cdn.aframe.io/fonts/Exo2Bold.fnt; side: double; value: SIZE: \t XL\nBRAND:\t Flipkart\n Color:\t Blue\n Desc:\n slim, tight, wear\n for men. Best \nfor occasions." position="1 0 0" rotation="0 -19.595 0" scale="3 1.5 3" ></a-entity>
+        </a-box>
+<!--   <a-box material="color:red" position="2 1 0" scale="1 0.5 0.5">
+  
+  </a-box> -->
+  <a-plane id="p2" class ="sell"  desc="product:formals ;description: fit and slim;price:900;currency:INR" position="2 1.5 0" scale ="0.6 0.6 0.6">
+    <a-image src="./img/cart.png"></a-image>
+  </a-plane>
+   
+      <!--mannequine-->
+    <a-gltf-model
+          id="item2"
+          class="clickToInfo"
+          position="1 0.2 0"
+          src="https://d1a370nemizbjq.cloudfront.net/6a4342b4-bf81-4997-920c-4222a8d01005.glb"
+          desc="product:formal wear;description: fit and slim;price:900;currency:INR"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 8000;easing:linear"
+        >
+        </a-gltf-model>
+</a-entity>
+
+<!----------------------Model - 2 - End-------------------------->  
+
+<!----------------------Model - 3 - start------------------------>
+
+      <a-entity position="-9 0.5 -36.5">
+   <a-box id="board3" material="opacity: 0.5; color: #b3f2ff; emissive: #b5eae9" position="0.26807 1.26703 0.875" rotation="0 -17.58980431051627 0" scale="0.643 1.1 0.028" visible="" geometry="">
+          <a-entity text="font: https://cdn.aframe.io/fonts/Exo2Bold.fnt; side: double; value:SIZE: \t XL\nBRAND:\t Flipkart\n Color:\t brown/black\n Desc:\n slim, tight, wear\n for women. Best \nfor interviews." position="1 0 0" rotation="0 -19.595 0" scale="3 1.5 3" ></a-entity>
+        </a-box>
+<!--   <a-box material="color:red" position="2 1 0" scale="1 0.5 0.5">
+  
+  </a-box> -->
+  <a-plane id="p3" class ="sell"  desc="product:women formals ;description: fit and slim;price:1000;currency:INR" position="2 1.5 0" scale ="0.6 0.6 0.6">
+    <a-image src="./img/cart.png"></a-image>
+  </a-plane>
+        
+
+      <!--mannequine-->
+    <a-gltf-model
+          id="item3"
+          class="clickToInfo"
+          position="1 0.2 0"
+          animation__mouseenter="property: scale;from:1 1 1; to: 2 2 2; startEvents: mouseleave; dur: 500"
+  animation__mouseleave="property: scale;from: 1 1 1; to: 1 1 1; startEvents: mouseleave; dur: 500"
+          src="https://d1a370nemizbjq.cloudfront.net/19da83d7-db69-4793-bba7-4ff4a6aaedbe.glb"
+          eventset__entclick2="_event:mouseenter; _target:#board1 ;visible:true"
+          eventset__extclick2="_event:mouseleave;_target:#board1 ;visible:false"
+          desc="product:womens formals ;description: fit and slim;price:1000;currency:INR"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 8000;easing:linear"
+        >
+        </a-gltf-model>
+</a-entity>
+
+<!----------------------Model - 3 - End-------------------------->  
+  
+<!----------------------Model - 4 - start------------------------>
+
+      <a-entity position="-5 0.5 -36.5">
+   <a-box id="board4" material="opacity: 0.5; color: #b3f2ff; emissive: #b5eae9" position="0.26807 1.26703 0.875" rotation="0 -17.58980431051627 0" scale="0.643 1.1 0.028" visible="" geometry="">
+          <a-entity text="font: https://cdn.aframe.io/fonts/Exo2Bold.fnt; side: double; value: SIZE: \t XL\nBRAND:\t Flipkart\n Color:\t Black\n Desc:\n slim, tight, wear\n for men. Best \nfor rides" position="1 0 0" rotation="0 -19.595 0" scale="3 1.5 3" ></a-entity>
+        </a-box>
+
+  
+  </a-box>
+  <a-plane id="p4" class ="sell"  desc="product:jacket ;description: fit and slim;price:3000;currency:INR" position="2 1.5 0" scale ="0.6 0.6 0.6">
+    <a-image src="./img/cart.png"></a-image>
+  </a-plane>
+        
+  
+      <!--mannequine-->
+    <a-gltf-model
+          id="item4"
+          class="clickToInfo"
+          position="1 0.2 0"
+          animation__mouseenter="property: scale;from:1 1 1; to: 2 2 2; startEvents: mouseleave; dur: 500"
+  animation__mouseleave="property: scale;from: 1 1 1; to: 1 1 1; startEvents: mouseleave; dur: 500"
+          src="https://d1a370nemizbjq.cloudfront.net/184ba576-d90a-4efa-80d9-107f830622c0.glb"
+          eventset__entclick2="_event:mouseenter; _target:#board1 ;visible:true"
+          eventset__extclick2="_event:mouseleave;_target:#board1 ;visible:false"
+          desc="product:jacket ;description: fit and slim;price:3000;currency:INR"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 8000;easing:linear"
+        >
+        </a-gltf-model>
+</a-entity>
+
+<!----------------------Model - 4 - End-------------------------->  
+
+
+
+
+<!----------------------sunglasses---------->
+
+
+    <!----------3rd shelf ---------->
+
+       <a-entity
+        gltf-model="/models/sunglasses/gg1.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        position="-22.4 3.15 -30.45"
+         class="model1"
+      >
+      </a-entity>
+      <a-entity
+        gltf-model="/models/sunglasses/gg2.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        position="-22.4 3.15 -31.22"
+        class="model1"
+      >
+      </a-entity>
+      <a-entity
+        gltf-model="/models/sunglasses/gg3.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        position="-22.4 3.15 -31.93"
+        class="model1"
+      >
+      </a-entity>
+      <a-entity
+        gltf-model="/models/sunglasses/gg4.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        position="-22.4 3.15 -29.75"
+        class="model1"
+      >
+      </a-entity>
+      
+
+      <!---------2nd shelf---------->
+<!--       <a-entity class="2ndshelf"> -->
+
+        <a-entity
+        gltf-model="/models/sunglasses/sg1.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        position="-22.4 2.3 -30.45"
+          class="model2"
+      >
+      </a-entity>
+
+      <!-----selected----->
+      <a-entity
+        gltf-model="/models/sunglasses/sg2.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        position="-22.4 2.3 -31.22"
+          class="model2"
+        
+      >
+      </a-entity>
+
+      <a-entity
+        gltf-model="/models/sunglasses/sg3.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        position="-22.4 2.3 -31.93"
+          class="model2"
+        
+      >
+      </a-entity>
+      <a-entity
+        gltf-model="/models/sunglasses/sg4.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        position="-22.4 2.3 -29.75"
+          class="model2"
+        
+      >
+      </a-entity>
+
+
+        
+<!--       </a-entity> -->
+      <!----------------------------1st shelf----------------->
+      <a-entity
+        gltf-model="/models/sunglasses/ss1.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 0 0"
+        position="-22.4 1.45 -30.45"
+          class="model3"
+        
+      >
+      </a-entity>
+      <a-entity
+        gltf-model="/models/sunglasses/ss2.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 0 0"
+        position="-22.4 1.45 -31.22"
+          class="model3"
+        
+      >
+      </a-entity>
+      <a-entity
+        gltf-model="/models/sunglasses/ss3.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 0 0"
+        position="-22.4 1.45 -31.93"
+          class="model3"
+        
+      >
+      </a-entity>
+      <a-entity
+        gltf-model="/models/sunglasses/ss4.gltf"
+        scale="0.3 0.3 0.3"
+        rotation="0 0 0"
+        position="-22.4 1.45 -29.75"
+          class="model3"
+        
+      >
+      </a-entity>
+
+
+  <!----------------------------------------------------->
+      
+   <a-entity
+              id="player"
+              side="double"
+              networked="template:#avatar-template;showLocalTemplate:false;"
+              spawn-in-circle="radius:0;"
+              camera
+              position="0 1.6 0"
+              wasd-controls
+              look-controls
+            >
+                
+               <a-entity
+              position="0 0 -1"
+              scale="0.1 0.1 0.1"
+              geometry="primitive: ring; radiusInner: 0.1; radiusOuter: 0.2;"
+              material="color: cyan; shader: flat;opacity:0.5"
+              cursor="fuse: false"
+            >
+              <a-animation
+                begin="click"
+                easing="ease-in"
+                attribute="scale"
+                fill="forwards"
+                from="0.01 0.01 0.01"
+                to="0.1 0.1 0.1"
+                dur="150"
+              ></a-animation>
+              <a-animation
+                begin="fusing"
+                easing="ease-in"
+                attribute="scale"
+                fill="backwards"
+                from="0.1 0.1 0.1"
+                to="0.01 0.01 0.01"
+                dur="1500"
+              ></a-animation>
+            </a-entity>
+     
+            </a-entity>
+        
+
+<!--       <a-entity position="0 -1.6 0" environment="preset:forest"></a-entity> -->
+
+      
+
+
+
+
+
+      
+      <a-entity light="type:ambient;intensity:0.5"></a-entity>
+    </a-scene>
+
+    <div class="actions">
+
+      <div id="buttons" class="my-4">
+       <button id="mic-btn" type="button" class="button" >Unmute Mic</button>
+      <button id="camera-btn" type="button" class="button" >Show Camera</button>
+    </div>
+      
+      <div class="mt-2">
+      <button class="collapsible">Cart</button>
+      <div class="content">
+        <table id="cart">
+          <tr>
+            <th>ID#</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td>total price:</td>
+            <td id="total">0</td>
+            <th><button>checkout</button></th>
+          </tr>
+        </table>
+      </div>
+  </div>
+      
+    </div>
+
+    <script>
+      // Mic status
+      let micEnabled = false;
+      // Mic button element
+      const micBtnEle = document.getElementById('mic-btn');
+      // Camera status
+      let cameraEnabled = false;
+      // Camera button element
+      const cameraBtnEle = document.getElementById('camera-btn');
+
+      // Called by Networked-Aframe when connected to server
+      function onConnect() {
+        console.log('onConnect', new Date());
+        NAF.connection.adapter.enableMicrophone(micEnabled);
+         NAF.connection.adapter.enableCamera(cameraEnabled);
+        // Handle mic button click (Mute and Unmute)
+        micBtnEle.addEventListener('click', function () {
+          NAF.connection.adapter.enableMicrophone(!micEnabled);
+          micEnabled = !micEnabled;
+          if(micEnabled){
+            micBtnEle.style.backgroundColor = "#ff4d4d";
+          }
+          else{
+            micBtnEle.style.backgroundColor = "white";
+          }
+          micBtnEle.textContent = micEnabled ? 'Mute Mic' : 'Unmute Mic';
+        });
+        cameraBtnEle.addEventListener('click', function () {
+          NAF.connection.adapter.enableCamera(!cameraEnabled);
+          cameraEnabled = !cameraEnabled;
+          if(cameraEnabled){
+            cameraBtnEle.style.backgroundColor = "#ff4d4d";
+          }
+          else{
+            cameraBtnEle.style.backgroundColor = "white";
+          }
+          cameraBtnEle.textContent = cameraEnabled ? 'Hide Camera' : 'Show Camera';
+    // var player = document.getElementById('player');
+    // var front_cam = player.querySelector('#front');
+    // var back_cam = player.querySelector('#back');
+    //       if(cameraEnabled){
+    //         front_cam.setAttribute('visible', 'true');
+    //         back_cam.setAttribute('visible', 'true');
+    //       }
+    //       else{
+    //         front_cam.setAttribute('visible', 'false');
+    //         back_cam.setAttribute('visible', 'false');
+    //       }
+
+        });
+      }
+    </script>
+    <script>
+      getUrlParams =  function () {
+    var match;
+    var pl = /\+/g;  // Regex for replacing addition symbol with a space
+    var search = /([^&=]+)=?([^&]*)/g;
+    var decode = function (s) { return decodeURIComponent(s.replace(pl, ' ')); };
+    var query = window.location.search.substring(1);
+    var urlParams = {};
+  
+    match = search.exec(query);
+    while (match) {
+      urlParams[decode(match[1])] = decode(match[2]);
+      match = search.exec(query);
+    }
+    return urlParams;
+  }
+  
+var param = this.getUrlParams();
+  
+document.querySelector("a-scene").addEventListener("loaded", onSceneLoad);
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+function onSceneLoad() {
+      let name = param.avatar;
+      var player = document.getElementById("player");
+      var myNametag = player.querySelector(".mainModel");
+      myNametag.setAttribute("gltf-model", name);
+}
+      var infoObjects = document.querySelectorAll(".clickToInfo");
+      infoObjects.forEach(targetEl=>{
+        targetEl.addEventListener("click", function () {
+        let temp = targetEl.getAttribute("src");
+        let product_info = targetEl.getAttribute("desc");
+        console.log(product_info);
+        window.open(
+          "https://complementary-mainproject.glitch.me/?link=" +
+            encodeURIComponent(temp) +
+            "&title=" +
+            encodeURIComponent(product_info.product),
+          "_blank"
+        );
+      });
+      })
+
+      // info1
+      var info1 = document.querySelectorAll(".model1");
+      info1.forEach(info=>{
+        info.addEventListener("click", function () {
+          console.log("model1");
+        window.open(
+          "https://factory-tryon.arshdeepsingh62.repl.co",
+          "_blank"
+        );
+      });
+      })
+      // info2
+      var info2 = document.querySelectorAll(".model2");
+      info2.forEach(info=>{
+        info.addEventListener("click", function () {
+          console.log("model2");
+          window.open(
+          "https://factory-tryon.arshdeepsingh62.repl.co",
+          "_blank"
+        );
+      });
+      })
+      // info3
+      var info3 = document.querySelectorAll(".model3");
+      info3.forEach(info=>{
+        info.addEventListener("click", function () {
+          console.log("model3");
+       window.open(
+          "https://factory-tryon.arshdeepsingh62.repl.co",
+          "_blank"
+        );
+      });
+      })
+
+      
+      
+
+      var map1 = new Map();
+
+      function gettotal(map2) {
+        var tot = document.getElementById("total");
+            var total_price = 0;
+            for (var [key, value] of map2.entries()) {
+              var price_per = document
+                .getElementById(key)
+                .getAttribute("desc").price;
+              total_price = total_price + price_per * value;
+            }
+            tot.innerHTML = total_price;
+        console.log(total_price);
+      }
+
+      var items = document.querySelectorAll(".sell");
+      items.forEach((item) => {
+        item.addEventListener("click", function (e) {
+          const id = e.target.id;
+          console.log(id);
+        
+          const cart = document.getElementById("cart");
+          if (map1.has(id)) {
+            map1.set(id, map1.get(id) + 1);
+            var quantity = document.getElementById(id + "_quant");
+            var price = document.getElementById(id + "_price");
+            gettotal(map1);
+
+
+            
+            quantity.innerHTML = map1.get(id);
+            price.innerHTML = map1.get(id) * item.getAttribute("desc").price;
+          } else {
+            const row = document.createElement("tr");
+            const data0 = document.createElement("td");
+            const text0 = document.createTextNode(id);
+            data0.appendChild(text0);
+            const data1 = document.createElement("td");
+            const text1 = document.createTextNode(
+              item.getAttribute("desc").product
+            );
+            data1.appendChild(text1);
+            const data2 = document.createElement("td");
+            const text2 = document.createTextNode(
+              item.getAttribute("desc").price
+            );
+            data2.setAttribute("id", id + "_price");
+            data2.appendChild(text2);
+            const data3 = document.createElement("td");
+            data3.setAttribute("id", id + "_quant");
+            const text3 = document.createTextNode("1");
+            data3.appendChild(text3);
+
+            const data4 = document.createElement("td");
+            const but = document.createElement("button");
+            const text4 = document.createTextNode("-");
+            but.appendChild(text4);
+            but.setAttribute("id", id + "_decrease");
+            data4.appendChild(but);
+            but.addEventListener("click", function () {
+              if (map1.get(id) != 0) {
+                document.getElementById(id + "_quant").innerHTML =
+                  map1.get(id) - 1;
+                map1.set(id, map1.get(id) - 1);
+                document.getElementById(id + "_price").innerHTML =
+                  map1.get(id) * item.getAttribute("desc").price;
+                gettotal(map1);
+              }
+            });
+
+            const data5 = document.createElement("td");
+            const but1 = document.createElement("button");
+            const text5 = document.createTextNode("+");
+            but1.appendChild(text5);
+            but1.setAttribute("id", id + "_increase");
+            data5.appendChild(but1);
+            but1.addEventListener("click", function () {
+              document.getElementById(id + "_quant").innerHTML =
+                map1.get(id) + 1;
+              map1.set(id, map1.get(id) + 1);
+              document.getElementById(id + "_price").innerHTML =
+                map1.get(id) * item.getAttribute("desc").price;
+              gettotal(map1);
+            });
+
+            row.appendChild(data0);
+            row.appendChild(data1);
+            row.appendChild(data2);
+            row.appendChild(data3);
+            row.appendChild(data4);
+            row.appendChild(data5);
+
+            cart.appendChild(row);
+            map1.set(id, 1);
+          }
+        });
+      });
+
+
+
+
+
+      
+    </script>
+  </body>
+</html>
