@@ -18,4 +18,3 @@
 - Add to cart
 - Responsive Advertisement billboards
 
-- Happy coding!
