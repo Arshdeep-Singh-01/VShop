@@ -6,11 +6,6 @@
 - Mind AR:- Mind AR is an opensource web augmented reality library
 - HTML/CSS and Javascript
 
-## Getting Started
-- Fork this repo (button on top)
-- Clone on your local machine
-- Run npm start
-
 ## Code Link
 <a href="https://replit.com/@ankitsharma610/V-Shop#README.md">Code Link</a>
 <br>
